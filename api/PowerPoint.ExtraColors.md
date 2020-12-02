@@ -14,12 +14,12 @@ localization_priority: Normal
 
 # ExtraColors object (PowerPoint)
 
-Represents the extra colors in a presentation. The object can contain up to eight colors, each of which is represented by an red-green-blue (RGB) value.
+Represents the extra colors in a presentation. The object can contain up to ten colors, each of which is represented by an red-green-blue (RGB) value. These colors are visible in the PowerPoint color picker as "Recent Colors" and can be created by the user when choosing a color that is not present in the active theme.
 
 
 ## Example
 
-Use the [ExtraColors](PowerPoint.Presentation.ExtraColors.md)property to return the  **ExtraColors** object. Use **ExtraColors** (_index_), where _index_ is the extra color index number, to return the red-green-blue (RGB) value for a single extra color. The following example adds a rectangle to slide one in the active presentation and sets its fill foreground color to the first extra color. If there hasn't been at least one extra color defined for the presentation, this example will fail.
+Use the [ExtraColors](PowerPoint.Presentation.ExtraColors.md) property to return the  **ExtraColors** object. Use **ExtraColors** (_index_), where _index_ is the extra color index number, to return the red-green-blue (RGB) value for a single extra color. The following example adds a rectangle to slide one in the active presentation and sets its fill foreground color to the first extra color. If there hasn't been at least one extra color defined for the presentation, this example will fail.
 
 
 ```vb
@@ -30,7 +30,7 @@ With ActivePresentation
 End With
 ```
 
-Use the [Add](PowerPoint.ExtraColors.Add.md)method to add an extra color. The following example adds an extra color to the active presentation (if the color hasn't already been added).
+Use the [Add](PowerPoint.ExtraColors.Add.md) method to add an extra color. The following example adds an extra color to the active presentation (if the color hasn't already been added).
 
 
 
@@ -39,6 +39,7 @@ Use the [Add](PowerPoint.ExtraColors.Add.md)method to add an extra color. The fo
 ActivePresentation.ExtraColors.Add RGB(69, 32, 155)
 ```
 
+Use the [Clear](PowerPoint.ExtraColors.Clear.md) method to remove all of the extra colors from the presentation.
 
 ## See also
 
