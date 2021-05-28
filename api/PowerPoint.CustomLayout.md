@@ -14,21 +14,28 @@ localization_priority: Normal
 
 # CustomLayout object (PowerPoint)
 
-Represents a custom layout associated with a presentation design. The **CustomLayout** object is a member of the **[CustomLayouts](PowerPoint.CustomLayouts.md)** collection.
+Represents a custom layout associated with a slide or slide range. The **CustomLayout** object is a member of the **[CustomLayouts](PowerPoint.CustomLayouts.md)** collection. This object is available on Windows only and is not available in PowerPoint for macOS as of version 16.50.
 
 
 ## Remarks
 
-Use the  **CustomLayout** property of the **[Slide](PowerPoint.Slide.md)** or **[SlideRange](PowerPoint.SlideRange.md)** objects to access a **CustomLayout** object, for example:
+Use the  **CustomLayout** property of the **[Slide](PowerPoint.Slide.md)** or **[SlideRange](PowerPoint.SlideRange.md)** objects or the **[CustomLayouts](PowerPoint.CustomLayouts.md)** collection of the **[SlideMaster](PowerPoint.SlideRange.md)** object to access a **CustomLayout** object, for example:
 
 
 ```vb
 ActiveWindow.Selection.SlideRange(1).CustomLayout
 ```
 
-
 ```vb
 ActivePresentation.Slides(1).CustomLayout
+```
+
+```vb
+ActivePresentation.SlideMaster.CustomLayouts(1)
+```
+
+```vb
+ActivePresentation.Designs(1).SlideMaster.CustomLayouts(1)
 ```
 
 Use the  **[Add](PowerPoint.CustomLayouts.Add.md)** method of the **CustomLayouts** collection to add a new custom layout to the presentation design's custom layouts. Use the **[Item](PowerPoint.CustomLayouts.Add.md)** method to refer to a custom layout. Use the **[Paste](PowerPoint.CustomLayouts.Paste.md)** method to paste the slides on the Clipboard into a custom layout and add the custom layout to the **CustomLayouts** collection.
