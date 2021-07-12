@@ -14,7 +14,7 @@ localization_priority: Normal
 
 # CustomLayout.Preserved property (PowerPoint)
 
-Determines whether the specified custom layout is preserved from changes. Read/write.
+Represents whether a custom layout remains available in the design master even if it is not used by any slides. Read/write.
 
 
 ## Syntax
