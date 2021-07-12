@@ -14,7 +14,7 @@ localization_priority: Normal
 
 # Design.Preserved property (PowerPoint)
 
-Represents whether a design master is preserved from changes. Read/write.
+Represents whether a design master remains available in the file even if it is not used by any slides. Read/write.
 
 
 ## Syntax
@@ -37,8 +37,8 @@ The value of the  **Preserved** property can be one of these **MsoTriState** con
 
 |Constant|Description|
 |:-----|:-----|
-|**msoFalse**|The design master is not preserved and can be edited.|
-|**msoTrue**| The design master is preserved and cannot be edited.|
+|**msoFalse**|The design master is not preserved and will be removed if no slides are assigned to it.|
+|**msoTrue**| The design master is preserved will be retained in the file even if no slide is assigned to it.|
 
 ## Example
 
